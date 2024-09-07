@@ -31,12 +31,11 @@ public class MyMain{
 
     public static void main(String[] args){
         LinkedList<Person> list = new LinkedList<>();
-        String data = "Denny Thongrasmy 003\nDen Thon 324\nDee Tee 234\n";
+        String data = "Denny Thongrasmy 003\nDen Thon 324\nDee Tee 234\nBob Joe 123\n";
         InputStream inputStream = new ByteArrayInputStream(data.getBytes());
         
         try{
             store(inputStream, list);
-            System.out.println("Displaying people:");
             display(System.out, list);
             System.out.println("Searching for ID 003:");
             int index = find("003", list);

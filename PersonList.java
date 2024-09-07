@@ -37,11 +37,10 @@ public class PersonList {
 
     public static void main(String[] args){
         PersonList personList = new PersonList();
-        String data = "Denny Thongrasmy 003\nDen Thon 324\nDee Tee 234\n";
+        String data = "Denny Thongrasmy 003\nDen Thon 324\nDee Tee 234\nJohn Smith 123\n";
         InputStream inputStream = new ByteArrayInputStream(data.getBytes());
         try {
             personList.store(inputStream);
-            System.out.println("Displaying people:");
             personList.display(System.out);
             System.out.println("Searching for ID 003:");
             int index = personList.find("003");
